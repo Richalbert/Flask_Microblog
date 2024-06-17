@@ -2,13 +2,17 @@
 
 ## le lancement du serveur
 
-(venv) $ export FLASK_APP=microblog.py
+Sous Windows 11 (optionnel, ca marche aussi bien sans !)
 
-(venv) $ flask run
+- ```(venv) $ export FLASK_APP=microblog.py``` 
+
+Puis
+
+- ```(venv) $ flask run```
 
 ## acces au serveur
 
-http://localhost:5000/
+- ```http://localhost:5000/```
 
 
 
