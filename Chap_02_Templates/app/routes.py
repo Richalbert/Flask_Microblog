@@ -6,10 +6,28 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Richalbert'}
+    user = {'username': 'Richard', 'name': 'Albert'}
     print(user['username'])
+
+    posts = [
+        {
+            'author': 
+            {
+                'username': 'John',
+                'name': 'Doe'
+            },
+            'body': 'Today is a beautiful day'
+        }, 
+        {
+            'author': {
+                'username': 'Susan',
+                'name': 'Vega'
+            },
+            'body': 'Because the sun shine !'
+        }
+    ]
     
-    title = None
-    return render_template('index.html', title=title, user=user)
-    # return render_template('index.html', title='Home', user=user)
+    title = 'Home Page'
+    return render_template('index.html', title=title, user=user, posts=posts)
+
 
