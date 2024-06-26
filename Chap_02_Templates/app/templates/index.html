@@ -1,20 +1,15 @@
 <!-- app/templates/index.html -->
 
-<!doctype html>
-<html>
-    <head>
-        {% if title %}
-            <title>{{ title }}</title>ù
-        {% else %}
-            <title>Wlecome to Microblog</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hello {{ user.username }} {{ user.name|upper }}</h1>
-        {% for post in posts %} 
-            <div>
-                <p>{{ post.author.username }} a dit: {{ post.body }}</p>
-            </div>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Hello {{ user.username }} {{ user.name|upper }}</h1>
+    
+    {% for post in posts %} 
+        <div>
+            <p>{{ post.author.username }} a dit: {{ post.body }}</p>
+        </div>
+    {% endfor %}    
+
+{% endblock %}

@@ -1,0 +1,20 @@
+<!-- app/templates/bases.html  -->
+
+<!doctype html>
+<html>
+    <head>
+        {% if title %}
+            <title>{{ title }} - Microblog</title>
+        {% else %}
+            <title>Wlecome to Microblog</title>
+        {% endif %}
+    </head>
+
+    <bodyy>
+        <div>
+            Microblog: <a href="/index">Home</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </bodyy>
+</html>
