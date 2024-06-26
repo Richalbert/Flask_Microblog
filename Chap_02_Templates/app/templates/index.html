@@ -3,7 +3,11 @@
 <!doctype html>
 <html>
     <head>
-        <title>{{ title }}</title>
+        {% if title %}
+            <title>{{ title }}</title>ù
+        {% else %}
+            <title>Wlecome to Microblog</title>
+        {% endif %}
     </head>
     <body>
         <h1>Hello, {{ user.username }} and World 3 !</h1>

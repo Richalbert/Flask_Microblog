@@ -8,4 +8,8 @@ from app import app
 def index():
     user = {'username': 'Richalbert'}
     print(user['username'])
-    return render_template('index.html', title='Home', user=user)
+    
+    title = None
+    return render_template('index.html', title=title, user=user)
+    # return render_template('index.html', title='Home', user=user)
+
